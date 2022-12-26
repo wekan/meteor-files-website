@@ -5,7 +5,7 @@ import { filesize } from 'meteor/mrt:filesize';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import Analytics from 'meteor/ostrio:analytics';
+//import Analytics from 'meteor/ostrio:analytics';
 
 import { persistentReactive } from '/imports/client/misc/persistent-reactive.js';
 import { setUpServiceWorker } from '/imports/client/misc/setup-service-worker.js';
@@ -24,9 +24,9 @@ Meteor.setTimeout(() => {
 }, 10240);
 
 // ENABLE ANALYTICS IF TRACKING_ID IS PROVIDED
-if (Meteor.settings.public?.trackingId) {
-  _app.analytics = new Analytics(Meteor.settings.public.trackingId);
-}
+//if (Meteor.settings.public?.trackingId) {
+//  _app.analytics = new Analytics(Meteor.settings.public.trackingId);
+//}
 
 // HELPER FOR CREATING MULTIPLE LISTENERS
 const addListener = (target, events, func) => {
